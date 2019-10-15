@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the column-switcher component.
+// -----------------------------------------------------------------------------
+
+// .cols > * {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: calc((var(--s1) / 2) * -1);
+// }
+
+// .cols > * > * {
+//   flex-grow: 1;
+//   flex-basis: calc((var(--measure) - (70% - var(--s1))) * 999);
+//   margin: calc(var(--s1) / 2);
+// }
+
+// 2 cols
+// .col-2 > * > :nth-last-child(n + 3),
+// .col-2 > * > :nth-last-child(n + 3) ~ * {
+//   flex-basis: 100%;
+// }
+
+// Column order
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+// 3 cols
+// .col-3 > * > :nth-last-child(n + 4),
+// .col-3 > * > :nth-last-child(n + 4) ~ * {
+//   flex-basis: 100%;
+// }
+
+.col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.span-col-3 {
+  grid-column: span 3 / auto;
+}

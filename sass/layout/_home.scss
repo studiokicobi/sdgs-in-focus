@@ -1,0 +1,1537 @@
+// -----------------------------------------------------------------------------
+// @font-face declarations
+// -----------------------------------------------------------------------------
+
+// Google Fonts
+
+/* miriam-libre-regular - latin */
+@font-face {
+  font-family: "Miriam Libre";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/miriam-libre-v6-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Miriam Libre Regular"), local("MiriamLibre-Regular"),
+    url("../fonts/miriam-libre-v6-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/miriam-libre-v6-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/miriam-libre-v6-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/miriam-libre-v6-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/miriam-libre-v6-latin-regular.svg#MiriamLibre")
+      format("svg"); /* Legacy iOS */
+}
+
+/* miriam-libre-700 - latin */
+@font-face {
+  font-family: "Miriam Libre";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/miriam-libre-v6-latin-700.eot"); /* IE9 Compat Modes */
+  src: local("Miriam Libre Bold"), local("MiriamLibre-Bold"),
+    url("../fonts/miriam-libre-v6-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/miriam-libre-v6-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/miriam-libre-v6-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/miriam-libre-v6-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/miriam-libre-v6-latin-700.svg#MiriamLibre") format("svg"); /* Legacy iOS */
+}
+
+/* permanent-marker-regular - latin */
+@font-face {
+  font-family: "Permanent Marker";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/permanent-marker-v9-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Permanent Marker Regular"), local("PermanentMarker-Regular"),
+    url("../fonts/permanent-marker-v9-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/permanent-marker-v9-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/permanent-marker-v9-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/permanent-marker-v9-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/permanent-marker-v9-latin-regular.svg#PermanentMarker")
+      format("svg"); /* Legacy iOS */
+}
+
+/* assistant-regular - latin */
+@font-face {
+  font-family: "Assistant";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/assistant-v4-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Assistant"), local("Assistant-Regular"),
+    url("../fonts/assistant-v4-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/assistant-v4-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/assistant-v4-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/assistant-v4-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/assistant-v4-latin-regular.svg#Assistant") format("svg"); /* Legacy iOS */
+}
+
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+
+// Colors (via Zeplin.io project)
+$white: rgb(255, 255, 255);
+$dark-seafoam: rgb(31, 173, 142);
+$ice: rgb(236, 245, 243);
+$dark-sky-blue: rgb(51, 166, 221);
+$very-light-pink: rgb(242, 242, 242);
+$ice-blue: rgb(227, 241, 245);
+$black: rgb(40, 40, 40);
+$deep-lavender: rgb(138, 86, 183);
+$very-light-pink: rgb(201, 201, 201);
+$very-light-pink: rgb(252, 240, 234);
+$brownish-grey: rgb(90, 90, 90);
+$sickly-yellow: rgb(216, 209, 41);
+$dark-peach: rgb(229, 123, 89);
+$soft-green: rgb(129, 195, 123);
+$medium-pink: rgb(229, 98, 143);
+$very-light-green: rgb(225, 240, 224);
+$light-pink: rgb(248, 219, 232);
+$ecru: rgb(246, 244, 207);
+$very-light-pink: rgb(228, 228, 228);
+$pale-lavender: rgb(238, 228, 247);
+$powder-blue: rgb(188, 224, 253);
+$dark-slate-blue: rgb(25, 72, 106);
+$orangey-red: rgb(255, 58, 33);
+$leafy-green: rgb(76, 159, 56);
+$cerise: rgb(221, 19, 103);
+$dusty-orange: rgb(253, 105, 37);
+$pale-grey: rgb(241, 249, 255);
+$very-light-lavender: rgb(248, 242, 248);
+$light-slate: rgb(209, 218, 225);
+$light-green: #dbecd7;
+$light-yellow-green: #edf5ea;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+:root {
+  --ratio: 1.4;
+  --s-5: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio)
+  );
+  --s-4: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio)
+  );
+  --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));
+  --s-2: calc(var(--s0) / var(--ratio) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s0) * var(--ratio) * var(--ratio));
+  --s3: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio));
+  --s4: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
+  --s5: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio)
+  );
+  --measure: 65ch;
+  --line-height: var(--ratio);
+  --line-height-small: calc(0.8 * var(--ratio));
+  --border-thin: var(--s-5);
+  --border-thick: var(--s-2);
+  line-height: var(--ratio);
+  font-size: calc(0.333vw + 1em);
+  font-family: var(--font-plain);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+// -----------------------------------------------------------------------------
+// Mixins
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Global
+// -----------------------------------------------------------------------------
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+h1 {
+  font-family: "Miriam Libre";
+  font-weight: 700;
+  font-size: 210%;
+  margin: 0 0 0.25em 0;
+  color: $black;
+}
+
+h2 {
+  font-family: "Miriam Libre";
+  font-weight: 700;
+  font-size: 180%;
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  font-family: "Miriam Libre";
+  font-weight: 400;
+  font-size: 74%;
+  color: $brownish-grey;
+  margin-bottom: 1rem;
+}
+
+p.big {
+  margin-top: 0;
+  font-size: 95%;
+  color: $brownish-grey;
+}
+
+.scroll-more a {
+  color: $black;
+  font-family: "Permanent Marker";
+  letter-spacing: 0.04em;
+  font-size: 130%;
+  padding-left: 2.9em;
+  margin-top: 1.75em;
+  display: block;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: -0.35em;
+    left: 0px;
+    content: "";
+    background-image: url(../img/scroll.svg);
+    background-size: 100% 100%;
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
+.scroll-more-white a {
+  color: $white;
+
+  &::after {
+    background-image: url(../img/scroll-white.svg);
+  }
+}
+
+.scroll-more-green a {
+  color: $leafy-green;
+
+  &::after {
+    background-image: url(../img/scroll-green.svg);
+  }
+}
+
+.arrow-link a {
+  color: $black;
+  font-family: "Permanent Marker";
+  letter-spacing: 0.04em;
+  font-size: 120%;
+  margin-top: 3em;
+  display: block;
+  position: relative;
+
+  span {
+    background-image: url(../img/arrow-right-black.svg);
+    width: 1.3em;
+    height: 1.3em;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-bottom: -0.35em;
+    margin-left: 0.5em;
+  }
+}
+
+// Column order
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+// -----------------------------------------------------------------------------
+// Page header
+// -----------------------------------------------------------------------------
+
+.site-header {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.16);
+  background-color: $white;
+  padding: var(--s-2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: +1;
+
+  &__brand {
+    img {
+      max-height: 6em !important;
+      height: calc(3em + 1vh);
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__nav {
+    a {
+      font-family: "Permanent Marker";
+      font-size: 110%;
+      letter-spacing: 0.04em;
+      color: $black;
+
+      @include on-event {
+        color: $dark-sky-blue;
+        text-decoration: underline;
+        background-color: $white;
+        // border-bottom: 1px solid $dark-sky-blue;
+      }
+    }
+  }
+
+  .burger {
+    margin-top: calc(6px + 0.75vh);
+    background-color: $white;
+
+    @include on-event {
+      background-color: $white;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Main hero
+// -----------------------------------------------------------------------------
+
+.main-hero {
+  background-image: url(../img/banner-wheel.svg),
+    url(../img/pattern-crosses-2.svg);
+  background-repeat: no-repeat, repeat;
+  background-position-x: -30vh, 0;
+  background-position-y: calc(10vh + 2.625em), 0;
+  background-size: 80vh, auto;
+  height: 100vh;
+
+  // SDG images
+  &__img {
+    figure {
+      padding: 0;
+      background-image: url(../img/arrow-curved.svg);
+      background-repeat: no-repeat;
+      background-size: 2em;
+      background-position: 98% 2vh;
+      max-width: 40vw;
+      padding-left: 2.5vw;
+      padding-right: 2.5em;
+
+      figcaption {
+        font-family: "Permanent Marker";
+        text-align: right;
+        font-size: calc(0.13em + 1.05vw);
+        padding-right: 0.75em;
+        letter-spacing: 0.01em;
+        margin-top: -0.25em;
+        padding-bottom: 0.5em;
+      }
+
+      .column {
+        padding: 0.1rem 0.3rem;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Intro
+// -----------------------------------------------------------------------------
+
+.intro {
+  .column {
+    margin: auto;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  &__feature {
+    padding: 3.5em 0;
+    text-align: center;
+    border-radius: 0.25em;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: -3.5em;
+      transform: translateY(-50%);
+      content: "";
+      background-size: 100% 100%;
+      width: 7em;
+      height: 7em;
+    }
+    &-1 {
+      background-color: $very-light-lavender;
+      color: $deep-lavender;
+      margin-bottom: 1.5em;
+
+      &::after {
+        background-image: url(../img/intro-icon-1.svg);
+      }
+    }
+
+    &-2 {
+      background-color: $ice;
+      color: $dark-seafoam;
+
+      &::after {
+        background-image: url(../img/intro-icon-2.svg);
+      }
+    }
+
+    strong {
+      display: block;
+      font-size: 500%;
+      line-height: 1;
+      margin: 0.15em 0 0.05em 0;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 125%;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Focus
+// -----------------------------------------------------------------------------
+
+.focus {
+  background-image: url(../img/pattern-crosses-2.svg);
+  background-repeat: repeat;
+  background-size: auto;
+
+  .hero-body {
+    margin: 0;
+    padding: 0;
+
+    .container {
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    margin: auto; // horizontally center the content
+
+    p {
+      max-width: 25rem;
+
+      &.big {
+        margin-bottom: 2em;
+      }
+    }
+
+    ul {
+      margin-top: 3.5em;
+
+      li {
+        background: $white;
+        border-radius: 0.25em;
+        padding: 3em 1em 2em 1em;
+        position: relative;
+        max-width: 9.5em;
+
+        &::after {
+          position: absolute;
+          top: -1.5em;
+          left: 50%;
+          transform: translateX(-50%);
+          content: "";
+          background-size: 100% 100%;
+          width: 4em;
+          height: 4em;
+        }
+
+        p {
+          font-family: "Miriam Libre";
+          font-size: 66%;
+          font-weight: bold;
+          text-align: center;
+          margin: auto;
+          padding: 0;
+        }
+      }
+
+      li:nth-of-type(1) {
+        &::after {
+          background-image: url(../img/focus-tick-purple.svg);
+        }
+      }
+
+      li:nth-of-type(2) {
+        margin-left: 3.4em;
+
+        &::after {
+          background-image: url(../img/focus-tick-green.svg);
+        }
+      }
+
+      li:nth-of-type(3) {
+        margin-left: 3.4em;
+
+        &::after {
+          background-image: url(../img/focus-tick-orange.svg);
+        }
+      }
+    }
+  }
+
+  &__img {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      vertical-align: middle;
+      object-fit: cover;
+      height: calc(100vh / 3);
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// UHC
+// -----------------------------------------------------------------------------
+
+.uhc {
+  .column {
+    margin: auto;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  ul {
+    color: $black;
+    font-family: "Miriam Libre";
+    margin-top: 3.5em;
+
+    li {
+      position: relative;
+      padding: 3em 0 3em 8em;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        content: "";
+        background-size: 100% 100%;
+        width: 7em;
+        height: 7em;
+      }
+    }
+
+    li:nth-of-type(1) {
+      &::before {
+        background-image: url(../img/uhc-icon-1.svg);
+      }
+    }
+
+    li:nth-of-type(2) {
+      &::before {
+        background-image: url(../img/uhc-icon-2.svg);
+      }
+    }
+
+    li:nth-of-type(3) {
+      &::before {
+        background-image: url(../img/uhc-icon-3.svg);
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SDG
+// -----------------------------------------------------------------------------
+.sdg-17 {
+  h2,
+  p,
+  ul {
+    color: $dark-slate-blue;
+  }
+}
+
+//
+// Header
+//
+
+.sdg-header {
+  .column {
+    margin: auto 0;
+  }
+}
+
+.sdg-17-header {
+  background: $dark-slate-blue url(../img/sdg17-title.svg) no-repeat 62px 34px;
+}
+
+.sdg-17-header,
+.sdg-3-header {
+  h2,
+  p {
+    color: $white;
+  }
+}
+
+//
+// Part 1
+//
+.sdg-hero-text {
+  background-size: 45vw;
+  padding: 10em 0;
+
+  .hero-body {
+    padding: 0 7.5%;
+  }
+
+  p {
+    font-size: 180%;
+    font-weight: bold;
+  }
+}
+
+.sdg-17-hero-text {
+  background: $light-slate url(../img/sdg17-watermark-white.svg) no-repeat 60vw
+    center;
+}
+
+//
+// Part 2
+//
+.sdg-17-three-cols {
+  background: $light-slate url(../img/sdg17-map.svg) no-repeat center center;
+  background-size: 90%;
+  padding: 6em 0;
+
+  .hero-body {
+    padding: 0 7.5%;
+  }
+
+  .col-full {
+    border-top: 1px solid $white;
+    padding-top: 2em;
+  }
+
+  hr {
+    background-color: $white;
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 2.25rem 0;
+  }
+
+  h2 {
+    max-width: 13em;
+    padding-bottom: 1em;
+  }
+
+  .box-list {
+    color: $dark-slate-blue;
+    font-family: "Miriam Libre";
+
+    dt {
+      margin-bottom: 1em;
+      font-size: 85%;
+      min-height: 3em;
+
+      strong {
+        color: $dark-slate-blue;
+      }
+    }
+
+    dd {
+      font-size: 70%;
+      background: $white;
+      padding: 1.3em;
+      border-radius: 0.2em;
+      margin-bottom: 0.3em;
+
+      strong {
+        color: $dark-slate-blue;
+      }
+    }
+  }
+
+  dl.map-pin dd {
+    background: $white url(../img/sdg17-pin.svg) no-repeat 1em 50%;
+    background-size: 2.1em 2.1em;
+    padding-left: 4em;
+  }
+}
+
+//
+// Part 3
+//
+.sdg-17-part-3 {
+  background-color: $light-slate;
+
+  .hero-body {
+    padding: 0 7.5%;
+  }
+
+  &__stats {
+    ul {
+      li {
+        padding-left: 8rem;
+        font-family: "Miriam Libre";
+
+        &:nth-child(1) {
+          background: url(../img/sdg17-multicompany.svg) no-repeat left center;
+          margin-bottom: 4em;
+        }
+
+        &:nth-child(2) {
+          background: url(../img/sdg17-hand.svg) no-repeat left center;
+        }
+
+        span {
+          font-family: $dark-slate-blue;
+          font-weight: bold;
+          display: block;
+          font-size: 350%;
+          line-height: 1;
+          margin: 0.15em 0 0.05em 0;
+        }
+
+        em {
+          font-weight: bold;
+          font-style: normal;
+          font-size: 125%;
+        }
+      }
+    }
+  }
+}
+
+//
+// Part 4
+//
+.sdg-17-part-4 {
+  background-color: $light-slate;
+
+  .hero-body {
+    padding: 0 7.5%;
+  }
+
+  &__stats {
+    ul {
+      li {
+        padding-left: 8rem;
+        font-family: "Miriam Libre";
+
+        &:nth-child(1) {
+          background: url(../img/sdg17-tower.svg) no-repeat left top;
+          margin-bottom: 4em;
+        }
+
+        &:nth-child(2) {
+          background: url(../img/sdg17-globe.svg) no-repeat left top;
+        }
+
+        span {
+          font-family: $dark-slate-blue;
+          font-weight: bold;
+          display: block;
+          font-size: 350%;
+          line-height: 1;
+          margin: 0.15em 0 0.05em 0;
+        }
+
+        em {
+          font-weight: bold;
+          font-style: normal;
+          font-size: 125%;
+        }
+      }
+    }
+  }
+}
+
+//
+// Footer
+//
+.sdg-footer {
+  padding: 0 7.5%;
+
+  .footer-card {
+    .card {
+      box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.16), 0 0 0 0 rgba(0, 0, 0, 0);
+      border-radius: 0.04em;
+      min-height: 26em;
+      background-color: $very-light-pink;
+
+      .card-image {
+        border: 0;
+      }
+
+      .card-content {
+        h3 {
+          font-family: "Miriam Libre";
+          font-size: 75%;
+          font-weight: bold;
+          color: $brownish-grey;
+        }
+
+        h2 {
+          font-family: "Miriam Libre";
+          font-size: 110%;
+          font-weight: bold;
+          margin-bottom: 0.5em;
+          color: $black;
+        }
+
+        p {
+          font-family: "Assistant";
+          font-size: 16px;
+          color: $brownish-grey;
+        }
+      }
+    }
+
+    &__intro {
+      .card {
+        box-shadow: none;
+        background-color: transparent;
+
+        .card-content {
+          background-color: transparent;
+
+          h2 {
+            font-size: 180%;
+          }
+
+          p {
+            font-family: "Miriam Libre";
+            font-size: 100%;
+            color: $brownish-grey;
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-more a {
+    float: right;
+  }
+
+  &__button {
+    display: block;
+    border-radius: 0.2em;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: $dark-sky-blue;
+    color: $white;
+    font-family: "Permanent Marker";
+    font-size: 80%;
+    text-align: center;
+    padding: 0.75em 1em;
+
+    span {
+      background-image: url(../img/arrow-right-white.svg);
+      width: 1.3em;
+      height: 1.3em;
+      background-size: 100% 100%;
+      display: inline-block;
+      margin-bottom: -0.35em;
+      margin-left: 0.5em;
+    }
+
+    &-more {
+      float: right;
+    }
+  }
+}
+
+.sdg-17-footer {
+  background: $white url(../img/sdg17-watermark-colour.svg) no-repeat 5% 80%;
+}
+
+// -----------------------------------------------------------------------------
+// SDG 3
+// -----------------------------------------------------------------------------
+
+.sdg-3 {
+  hr {
+    background-color: $leafy-green;
+  }
+
+  .sdg-3-header {
+    background: $leafy-green url(../img/sdg3-title.svg) no-repeat 64px 34px;
+  }
+  .sdg-3-hero-text {
+    background: $light-green url(../img/sdg3-watermark-white.svg) no-repeat 95%
+      center;
+
+    p {
+      color: $leafy-green;
+    }
+  }
+
+  .sdg-3-footer {
+    background: $white url(../img/sdg3-watermark-green.svg) no-repeat 5% 80%;
+  }
+}
+
+.sdg-3-three-cols {
+  background-color: $light-green;
+
+  .hero-body {
+    margin: 0 5%;
+  }
+
+  column:nth-child(2) {
+    margin-left: 1em;
+  }
+
+  hr {
+    margin-bottom: 3em;
+  }
+
+  h2 {
+    background: url(../img/sdg3-heart.svg) no-repeat 49% top;
+    background-size: 8em;
+    padding-top: 7em;
+    font-family: "Miriam Libre";
+    font-weight: normal;
+    font-size: 18px;
+    color: $leafy-green;
+    text-align: center;
+
+    &.mosquito {
+      background-image: url(../img/sdg3-target3-mosquito.svg);
+    }
+
+    span {
+      font-size: 67px;
+      font-weight: bold;
+      text-align: center;
+      display: block;
+    }
+
+    em {
+      font-size: 28px;
+      text-align: center;
+      color: $leafy-green;
+      display: block;
+      font-style: normal;
+    }
+  }
+
+  h3 {
+    font-family: "Miriam Libre";
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    color: $leafy-green;
+    margin-top: 0.5em;
+
+    strong {
+      color: $leafy-green;
+    }
+  }
+
+  dl {
+    color: $leafy-green;
+    text-align: center;
+    background: url(../img/circle-hollow.svg) no-repeat center center;
+    background-size: contain;
+    margin-top: 0.5em;
+    padding: 3.4em;
+
+    &:nth-child(2) {
+      margin: auto 0.25em;
+    }
+
+    dt {
+      font-family: "Miriam Libre";
+      font-size: 18px;
+      font-weight: bold;
+    }
+    dd {
+      font-family: "Assistant";
+      font-size: 15px;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SDG 3.2
+// -----------------------------------------------------------------------------
+
+// Header
+.sdg-3-2-header {
+  background-color: $light-green;
+  background-image: url(../img/sdg3-title-green.svg),
+    url(../img/sdg3-target1-title.svg), url(../img/sdg3-target2-title.svg);
+  background-repeat: no-repeat;
+  background-position: 62px 34px, 212px 34px, 342px 34px;
+
+  p {
+    font-size: 88%;
+    font-weight: normal;
+    color: $brownish-grey;
+  }
+}
+
+// Part 1
+.sdg-3-2-hero-text {
+  background-color: $light-green;
+  p {
+    color: $leafy-green;
+  }
+}
+
+.green,
+.green > strong {
+  color: $leafy-green;
+}
+
+// Part 2
+
+.sdg-3-2-part-2 {
+  background-color: $light-green;
+
+  hr {
+    background-color: $leafy-green;
+  }
+
+  .box-list {
+    color: $leafy-green;
+    font-family: "Miriam Libre";
+    margin-top: 0.5em;
+
+    dt {
+      margin-bottom: 1em;
+      font-size: 85%;
+
+      strong {
+        color: $leafy-green;
+      }
+    }
+
+    dd {
+      font-size: 70%;
+      background: $white;
+      padding: 1.3em;
+      border-radius: 0.2em;
+      margin-bottom: 0.3em;
+      padding-left: 3rem;
+      position: relative;
+      em {
+        position: absolute;
+        top: 50%;
+        left: 0.5rem;
+        transform: translateY(-50%);
+        font-family: "Miriam Libre";
+        font-size: 42px;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+        width: 2rem;
+
+        span {
+          text-align: center;
+        }
+      }
+
+      .vertical {
+        display: block;
+        height: 5em;
+      }
+
+      strong {
+        color: $leafy-green;
+      }
+    }
+  }
+
+  // TEMP make this a component
+  &__stats {
+    color: $leafy-green;
+    ul {
+      li {
+        padding-left: 8rem;
+        font-family: "Miriam Libre";
+
+        &:nth-child(1) {
+          background: url(../img/sdg3-target1-2-woman.svg) no-repeat left center;
+          margin-bottom: 4em;
+        }
+
+        &:nth-child(2) {
+          background: url(../img/sdg3-target1-2-baby.svg) no-repeat left center;
+        }
+
+        span {
+          font-weight: bold;
+          display: block;
+          font-size: 350%;
+          line-height: 1;
+          margin: 0.15em 0 0.05em 0;
+        }
+
+        em {
+          font-weight: bold;
+          font-style: normal;
+          font-size: 125%;
+        }
+      }
+    }
+  }
+}
+
+// SDG 3.2 footer
+.sdg-3-2-footer {
+  background: $white url(../img/sdg3-target1-2-watermark.svg) no-repeat 5% 80%;
+}
+
+// -----------------------------------------------------------------------------
+// SDG 3.3
+// -----------------------------------------------------------------------------
+
+// Header
+.sdg-3-3-header {
+  background-color: $light-green;
+  background-image: url(../img/sdg3-title-green.svg),
+    url(../img/sdg3-target3-title.svg);
+  background-repeat: no-repeat;
+  background-position: 62px 34px, 212px 34px;
+}
+
+// Part 1
+.sdg-3-3-hero-text {
+  background: $light-yellow-green;
+
+  h2 {
+    color: $leafy-green;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: "Assistant";
+    font-size: 78%;
+    font-weight: normal;
+
+    strong {
+      font-weight: bold;
+    }
+
+    &.big {
+      font-family: "Miriam Libre";
+      font-size: 88%;
+      font-weight: normal;
+      color: $brownish-grey;
+    }
+  }
+}
+
+// Part 2
+.sdg-3-3-part-2 {
+  background: $light-yellow-green;
+
+  &__stats {
+    color: $leafy-green;
+    ul {
+      li {
+        font-family: "Miriam Libre";
+        background-size: 10em;
+        padding: 2em 2em 2em 13rem;
+        font-size: 110%;
+
+        &:nth-child(1) {
+          background: url(../img/sdg3-target3-microscope.svg) no-repeat left
+            center;
+        }
+
+        span {
+          font-weight: bold;
+          display: block;
+          font-size: 350%;
+          line-height: 1;
+          margin: 0.15em 0 0.05em 0;
+        }
+
+        em {
+          font-weight: bold;
+          font-style: normal;
+          font-size: 125%;
+        }
+      }
+    }
+  }
+
+  hr {
+    background-color: $leafy-green;
+  }
+
+  .stats-2 {
+    ul {
+      font-family: "Miriam Libre";
+      font-size: 22px;
+      color: $leafy-green;
+      font-size: 95%;
+      margin-top: 3em;
+
+      li {
+        padding-left: 6.3em;
+        position: relative;
+        margin-bottom: 3.3rem;
+
+        em {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background: url(../img/circle-hollow.svg) no-repeat;
+          background-size: 2.3em;
+          width: 2.3em;
+          height: 2.3em;
+          font-family: "Miriam Libre";
+          font-size: 48px;
+          font-weight: bold;
+          font-style: normal;
+          text-align: center;
+          line-height: 2.3em;
+          span {
+            font-size: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Map
+.sdg-3-3-map {
+  background: $light-yellow-green url(../img/sdg3-map.svg) no-repeat center
+    center;
+  background-size: 90%;
+  padding: 6em 0;
+
+  hr {
+    background-color: $leafy-green;
+    margin-bottom: 4em;
+  }
+
+  h2 {
+    font-family: "Miriam Libre";
+    font-size: 36px;
+    font-weight: normal;
+    color: $leafy-green;
+    max-width: 13em;
+
+    strong {
+      color: $leafy-green;
+    }
+  }
+
+  .hero-body {
+    padding: 0 7.5%;
+  }
+
+  .box-list {
+    color: $leafy-green;
+    font-family: "Miriam Libre";
+
+    ul {
+      li {
+        font-size: 70%;
+        background: $white;
+        padding: 1.3em;
+        border-radius: 0.2em;
+        margin-bottom: 0.3em;
+        background: $white url(../img/sdg3-pin.svg) no-repeat 1em 50%;
+        background-size: 2.1em 2.1em;
+        padding-left: 4em;
+
+        strong {
+          color: $leafy-green;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+.sdg-3-3-footer {
+  background: white url(../img/sdg3-target3-watermark.svg) no-repeat 5% 80%;
+}
+
+.more-link a {
+  font-family: "Permanent Marker";
+  color: $dark-sky-blue;
+  padding-right: 2em;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  position: relative;
+  margin-top: 1em;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    content: "";
+    background-image: url(../img/arrow-right-blue.svg);
+    background-size: 100% 100%;
+    width: 1.35em;
+    height: 1.35em;
+  }
+}
+
+// Part 5
+.sdg-3-triple-feature {
+  background-color: $light-yellow-green;
+
+  hr {
+    background-color: $leafy-green;
+  }
+
+  .hero-body {
+    margin: 0 5%;
+  }
+
+  column:nth-child(2) {
+    margin-left: 1em;
+  }
+
+  hr {
+    margin-bottom: 3em;
+  }
+
+  h2 {
+    background: url(../img/sdg3-target3-mosquito.svg) no-repeat 49% top;
+    background-size: 3em;
+    padding-top: 3.5em;
+    font-family: "Miriam Libre";
+    font-weight: normal;
+    font-size: 180%;
+    color: $leafy-green;
+    text-align: center;
+
+    strong {
+      color: $leafy-green;
+    }
+
+    span {
+      font-size: 67px;
+      font-weight: bold;
+      text-align: center;
+      display: block;
+    }
+
+    em {
+      font-size: 28px;
+      text-align: center;
+      color: $leafy-green;
+      display: block;
+      font-style: normal;
+    }
+  }
+
+  h3 {
+    font-family: "Miriam Libre";
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    color: $leafy-green;
+    margin-top: 0.5em;
+
+    strong {
+      color: $leafy-green;
+    }
+  }
+
+  dl {
+    color: $leafy-green;
+    text-align: center;
+    background: url(../img/circle-hollow.svg) no-repeat center center;
+    background-size: contain;
+    margin: 0.5em 0.25em;
+    padding: 3.4em;
+    width: 5em;
+
+    // &:nth-child(2) {
+    //   margin: auto 0.25em;
+    // }
+
+    dt {
+      font-family: "Miriam Libre";
+      font-size: 18px;
+      font-weight: bold;
+    }
+    dd {
+      font-family: "Assistant";
+      font-size: 15px;
+    }
+  }
+}
+
+// Part 6
+.sdg-3-3-part-6 {
+  background: $light-yellow-green;
+
+  dl {
+    background: url(../img/sdg3-3-circle-green.svg) no-repeat center 1em;
+    padding: 3.5em;
+
+    dt {
+      background: no-repeat center top;
+      font-family: "Miriam Libre";
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: $leafy-green;
+      padding-top: 4.5em;
+      max-width: 14em;
+      margin: auto;
+    }
+
+    dt:nth-child(1) {
+      background-image: url(../img/sdg3-3-venn-icon1.svg);
+    }
+    dt:nth-child(2) {
+      background-image: url(../img/sdg3-3-venn-icon2.svg);
+    }
+    dt:nth-child(2) {
+      background-image: url(../img/sdg3-3-venn-icon3.svg);
+    }
+
+    dd {
+      font-family: "Assistant";
+      font-size: 16px;
+      text-align: center;
+      color: $brownish-grey;
+      max-width: 14em;
+      margin: auto;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SDG 3.4
+// -----------------------------------------------------------------------------
+
+.sdg-3-4 {
+  // Header
+  .sdg-3-4-header {
+    background-color: $light-green;
+    background-image: url(../img/sdg3-title-green.svg),
+      url(../img/sdg3-target4-title.svg);
+    background-repeat: no-repeat;
+    background-position: 62px 34px, 212px 34px;
+  }
+  //   p {
+  //     font-size: 88%;
+  //     font-weight: normal;
+  //     color: $brownish-grey;
+  //   }
+  // }
+
+  // Part 1
+  .sdg-3-4-hero-text {
+    h2 {
+      font-family: "Miriam Libre";
+      font-size: 26px;
+      font-weight: bold;
+      color: $leafy-green;
+    }
+
+    p {
+      font-family: "Miriam Libre";
+      font-size: 18px;
+      font-weight: normal;
+      color: $brownish-grey;
+    }
+  }
+
+  //Part 3
+  .sdg-3-triple-feature {
+    h2 {
+      background-image: url(../img/sdg3-target4-lungs.svg);
+    }
+  }
+}
+
+.learn-more-green a {
+  font-family: "Permanent Marker";
+  color: $leafy-green;
+  padding-right: 2em;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  position: relative;
+  margin-top: 1em;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    content: "";
+    background-image: url(../img/arrow-right-green.svg);
+    background-size: 100% 100%;
+    width: 1.35em;
+    height: 1.35em;
+  }
+}

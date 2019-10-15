@@ -1,0 +1,90 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.site-header {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.16);
+  background-color: $white;
+  padding: var(--s0);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: +1;
+
+  &__logo {
+    img {
+      height: calc(3em + 1vh);
+      width: 100%;
+      display: block;
+    }
+  }
+
+  div:nth-of-type(2) {
+    margin: auto 0;
+  }
+
+  &__nav {
+    margin: 0 0.5em;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    ul {
+      padding: 0;
+
+      li {
+        display: inline;
+        font-family: "Permanent Marker";
+        font-size: 110%;
+        letter-spacing: 0.04em;
+
+        &:nth-of-type(2) {
+          margin-left: 2em;
+        }
+
+        a {
+          color: $black;
+
+          @include on-event {
+            color: $dark-sky-blue;
+            text-decoration: none;
+            border-bottom: 1px solid $dark-sky-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small screen rules for the header
+
+@media screen and (max-width: 1000px) {
+  .site-header {
+    flex-direction: column;
+    padding-bottom: 0;
+
+    &__logo {
+      margin: auto;
+      text-align: center;
+
+      img {
+        margin: auto;
+      }
+    }
+
+    &__nav {
+      margin: auto;
+      text-align: center;
+
+      li {
+        font-size: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
