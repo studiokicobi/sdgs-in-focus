@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="22px" viewBox="0 0 15 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>arrow-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 13.981 21 13.981 21 0 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-up" transform="translate(7.500000, 11.000000) rotate(-90.000000) translate(-7.500000, -11.000000) translate(-3.000000, 4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Path_330"></g>
+            <g id="Arrow_Right" mask="url(#mask-2)">
+                <g transform="translate(0.000000, -1.000000)">
+                    <g id="Group_658" transform="translate(0.000000, 6.396000)">
+                        <path d="M19.337,2.397 C21.274,2.331 21.363,0.258 19.383,0.326 C13.417,0.526 7.458,-0.166 1.492,0.038 C-0.445,0.104 -0.534,2.177 1.446,2.109 C7.411,1.909 13.371,2.6 19.337,2.397 Z" id="Path_328" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                    <g id="Group_659" transform="translate(11.638000, 0.000000)">
+                        <path d="M0.869,1.593 C1.968,2.736 6.452,6.196 5.888,7.873 C5.606,8.71 3.943,9.85 3.311,10.493 L0.091,13.769 C-0.546,14.416 2.354,15.441 3.033,14.751 L6.897,10.82 C7.583,10.12 9.297,9.011 9.36,7.935 C9.415,6.989 8.033,6.005 7.511,5.464 L3.706,1.511 C3.106,0.889 0.05,0.742 0.869,1.592" id="Path_329" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

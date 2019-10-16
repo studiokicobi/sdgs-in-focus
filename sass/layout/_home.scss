@@ -184,6 +184,135 @@ $text-color: rgb(34, 34, 34) !default;
 }
 
 // -----------------------------------------------------------------------------
+// Components
+// -----------------------------------------------------------------------------
+
+//Tooltip
+.tooltip {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px dotted #666;
+  text-align: left;
+}
+
+.tooltip .bottom {
+  min-width: 200px;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px 20px;
+  color: $brownish-grey;
+  background-color: $white;
+  font-weight: normal;
+  font-size: 13px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 99999999;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.tooltip:hover .bottom {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .bottom i {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.tooltip .bottom i::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+  background-color: $white;
+}
+
+//Stats
+.stats {
+  ul {
+    li {
+      padding-left: 11rem;
+      font-family: "Miriam Libre";
+      font-weight: normal;
+
+      &:nth-child(1) {
+        background-repeat: no-repeat;
+        background-position: left center;
+        height: 10em;
+        background-size: 10em;
+        background-position: left top;
+      }
+
+      span {
+        font-weight: bold;
+        display: block;
+        font-size: 350%;
+        line-height: 1;
+        margin: 0.15em 0 0.05em 0;
+
+        em {
+          font-size: 60%;
+        }
+      }
+
+      em {
+        font-weight: bold;
+        font-style: normal;
+        font-size: 125%;
+      }
+    }
+  }
+
+  &-2 {
+    ul {
+      font-family: "Miriam Libre";
+      font-size: 95%;
+      margin-top: 3em;
+      font-weight: normal;
+
+      li {
+        padding-left: 6.3em;
+        position: relative;
+        margin-bottom: 4.3rem;
+
+        em {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background: url(../img/circle-hollow.svg) no-repeat;
+          background-size: 2.3em;
+          width: 2.3em;
+          height: 2.3em;
+          font-family: "Miriam Libre";
+          font-size: 48px;
+          font-weight: bold;
+          font-style: normal;
+          text-align: center;
+          line-height: 2.3em;
+
+          span {
+            font-size: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
 // Global
 // -----------------------------------------------------------------------------
 
@@ -197,6 +326,10 @@ $text-color: rgb(34, 34, 34) !default;
   position: absolute;
   width: 1px;
   white-space: nowrap; /* 1 */
+}
+
+.lh-1 {
+  line-height: 1;
 }
 
 h1 {
@@ -243,7 +376,7 @@ p.big {
     top: -0.35em;
     left: 0px;
     content: "";
-    background-image: url(../img/scroll.svg);
+    background-image: url(../img/scroll-2.svg);
     background-size: 100% 100%;
     width: 2.5em;
     height: 2.5em;
@@ -620,8 +753,13 @@ p.big {
 //
 
 .sdg-header {
-  .column {
-    margin: auto 0;
+  figure {
+    text-align: center;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    line-height: 1.28;
   }
 }
 
@@ -643,9 +781,10 @@ p.big {
 .sdg-hero-text {
   background-size: 45vw;
   padding: 10em 0;
+  line-height: 1.28;
 
-  .hero-body {
-    padding: 0 7.5%;
+  @include desktop {
+    padding: 0 10%;
   }
 
   p {
@@ -709,9 +848,11 @@ p.big {
       padding: 1.3em;
       border-radius: 0.2em;
       margin-bottom: 0.3em;
+      font-family: "Assistant";
 
       strong {
         color: $dark-slate-blue;
+        font-family: "Miriam Libre";
       }
     }
   }
@@ -728,10 +869,6 @@ p.big {
 //
 .sdg-17-part-3 {
   background-color: $light-slate;
-
-  .hero-body {
-    padding: 0 7.5%;
-  }
 
   &__stats {
     ul {
@@ -773,9 +910,9 @@ p.big {
 .sdg-17-part-4 {
   background-color: $light-slate;
 
-  .hero-body {
-    padding: 0 7.5%;
-  }
+  // .hero-body {
+  //   padding: 0 7.5%;
+  // }
 
   &__stats {
     ul {
@@ -815,7 +952,7 @@ p.big {
 // Footer
 //
 .sdg-footer {
-  padding: 0 7.5%;
+  // padding: 0 7.5%;
 
   .footer-card {
     .card {
@@ -879,13 +1016,13 @@ p.big {
   }
 
   &__button {
-    display: block;
+    display: inline-block;
     border-radius: 0.2em;
     box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: $dark-sky-blue;
     color: $white;
     font-family: "Permanent Marker";
-    font-size: 80%;
+    font-size: 75%;
     text-align: center;
     padding: 0.75em 1em;
 
@@ -938,9 +1075,9 @@ p.big {
 .sdg-3-three-cols {
   background-color: $light-green;
 
-  .hero-body {
-    margin: 0 5%;
-  }
+  // .hero-body {
+  //   margin: 0 5%;
+  // }
 
   column:nth-child(2) {
     margin-left: 1em;
@@ -1288,9 +1425,9 @@ p.big {
     }
   }
 
-  .hero-body {
-    padding: 0 7.5%;
-  }
+  // .hero-body {
+  //   padding: 0 7.5%;
+  // }
 
   .box-list {
     color: $leafy-green;
@@ -1349,9 +1486,9 @@ p.big {
     background-color: $leafy-green;
   }
 
-  .hero-body {
-    margin: 0 5%;
-  }
+  // .hero-body {
+  //   margin: 0 5%;
+  // }
 
   column:nth-child(2) {
     margin-left: 1em;
@@ -1364,7 +1501,7 @@ p.big {
   h2 {
     background: url(../img/sdg3-target3-mosquito.svg) no-repeat 49% top;
     background-size: 3em;
-    padding-top: 3.5em;
+    padding-top: 3em;
     font-family: "Miriam Libre";
     font-weight: normal;
     font-size: 180%;
@@ -1408,10 +1545,10 @@ p.big {
     color: $leafy-green;
     text-align: center;
     background: url(../img/circle-hollow.svg) no-repeat center center;
-    background-size: contain;
+    background-size: 13em;
     margin: 0.5em 0.25em;
-    padding: 3.4em;
-    width: 5em;
+    padding: 4.8em;
+    height: 13em;
 
     // &:nth-child(2) {
     //   margin: auto 0.25em;
@@ -1435,7 +1572,7 @@ p.big {
 
   dl {
     background: url(../img/sdg3-3-circle-green.svg) no-repeat center 1em;
-    padding: 3.5em;
+    padding: 3em;
 
     dt {
       background: no-repeat center top;
@@ -1483,12 +1620,6 @@ p.big {
     background-repeat: no-repeat;
     background-position: 62px 34px, 212px 34px;
   }
-  //   p {
-  //     font-size: 88%;
-  //     font-weight: normal;
-  //     color: $brownish-grey;
-  //   }
-  // }
 
   // Part 1
   .sdg-3-4-hero-text {
@@ -1533,5 +1664,252 @@ p.big {
     background-size: 100% 100%;
     width: 1.35em;
     height: 1.35em;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SDG 5 and 10
+// -----------------------------------------------------------------------------
+
+.sdg-5-10 {
+  // Header
+  .sdg-5-10-header {
+    background-color: $very-light-pink;
+    background-image: url(../img/sdg5-title.svg), url(../img/sdg10-title.svg);
+    background-repeat: no-repeat;
+    background-position: 62px 34px, 175px 34px;
+
+    img {
+      width: 75%;
+      height: auto;
+    }
+
+    h2 {
+      display: inline;
+      &:nth-child(1) {
+        color: $orangey-red;
+        margin-bottom: 0;
+      }
+      &:nth-child(2) {
+        color: $cerise;
+      }
+    }
+    p {
+      margin-top: 1.5em;
+    }
+  }
+
+  // Part 2
+  .sdg-hero-text {
+    position: relative;
+
+    .bg {
+      background: $white url(../img/sdg5-10-icon.svg) no-repeat 113% center;
+      background-size: 50%;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.1;
+    }
+  }
+
+  // Part 3
+  .sdg-5-10-part-3 {
+    background-color: rgba($orangey-red, 0.2);
+
+    hr {
+      background-color: $orangey-red;
+    }
+
+    h2,
+    .stats li,
+    .stats li > *,
+    .stats-2 ul,
+    .stats-2 li > * {
+      color: $orangey-red;
+    }
+
+    .stats li:nth-child(1) {
+      background-image: url(../img/sdg5-gender.svg);
+    }
+  }
+
+  // Part 4
+  .sdg-5-10-part-4 {
+    background-color: rgba($cerise, 0.2);
+
+    hr {
+      background-color: $cerise;
+    }
+
+    h2,
+    .stats li,
+    .stats li > *,
+    .stats-2 li,
+    .stats-2 li > * {
+      color: $cerise;
+    }
+
+    .stats li:nth-child(1) {
+      background-image: url(../img/sdg10-equality.svg);
+    }
+  }
+
+  .sdg-5-10-footer {
+    background: url(../img/sdg5-10-watermark01.svg) no-repeat 5% 95%;
+    background-size: 40%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Register
+// -----------------------------------------------------------------------------
+.register {
+  .hero-body {
+    background: $white url(../img/close-on.svg) no-repeat left bottom;
+    background-size: contain;
+    h2 {
+      line-height: 1.25;
+    }
+    @media screen and (max-width: 800px) {
+      background-image: none;
+    }
+  }
+
+  .hero-foot {
+    footer {
+      color: rgba($white, 0.6);
+      background: $black;
+      padding: 3rem 1.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 950px) {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      figure {
+        margin-right: 4em;
+
+        @media screen and (max-width: 950px) {
+          margin-right: 0;
+        }
+      }
+
+      .footer-nav-primary {
+        opacity: 0.6;
+        font-family: Assistant;
+        font-size: 17px;
+        line-height: 1.47;
+        color: rgba($white, 0.6);
+        margin: 1.5em 0 0 0;
+
+        a {
+          color: $white;
+          opacity: 0.6;
+
+          @include on-event {
+            opacity: 0.95;
+          }
+        }
+      }
+
+      .footer-nav-secondary {
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-content: flex-end;
+          align-items: flex-end;
+
+          @media screen and (max-width: 950px) {
+            display: block;
+            margin: 2em auto 0 auto;
+          }
+
+          li {
+            display: inline;
+
+            img {
+              width: 1.2em;
+              opacity: 0.5;
+              margin-left: 0.5em;
+
+              @include on-event {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottom-bar {
+  background: #1d1d1d;
+  padding: 1.5em 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    text-align: center;
+
+    .top-link {
+      display: block;
+      margin: 2em 0 1em 0;
+    }
+  }
+
+  .bottom-bar-1 {
+    opacity: 0.5;
+    font-family: Assistant;
+    font-size: 65%;
+    color: $very-light-pink;
+    letter-spacing: 0.01em;
+
+    @media screen and (max-width: 950px) {
+      margin-top: 3px;
+    }
+
+    span {
+      margin: auto 0.3em;
+    }
+
+    a {
+      color: $very-light-pink;
+      text-decoration: underline;
+    }
+  }
+
+  .bottom-bar-2 {
+    align-content: flex-end;
+
+    @media screen and (max-width: 950px) {
+      margin-top: -3px;
+    }
+
+    .top-link {
+      opacity: 0.5;
+      font-family: "Permanent Marker";
+      font-size: 19px;
+      letter-spacing: 0.38px;
+      color: $very-light-pink;
+
+      span {
+        background: url(../img/arrow-up.svg) no-repeat;
+        width: 1.2em;
+        height: 1.2em;
+        background-position: right bottom;
+        display: inline-block;
+      }
+
+      @include on-event {
+        opacity: 0.8;
+      }
+    }
   }
 }
