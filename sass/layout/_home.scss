@@ -1450,7 +1450,7 @@ body {
         margin: 0 3vw;
 
         @media screen and (max-width: 1024px) {
-          margin: 0 0.5em;
+          margin: 0 0.5em 3em 0.5em;
         }
 
         &::after {
@@ -1790,6 +1790,12 @@ body {
 
       @media screen and (min-width: 1251px) {
         min-height: auto;
+        font-size: 65%;
+      }
+
+      @media screen and (min-width: 1410px) {
+        min-height: auto;
+        font-size: 70%;
       }
 
       strong {
@@ -3223,7 +3229,7 @@ body {
       }
 
       h2 {
-        display: inline;
+        display: block;
         &:nth-child(1) {
           color: $orangey-red;
           margin-bottom: 0;

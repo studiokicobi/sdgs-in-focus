@@ -7045,7 +7045,7 @@ body {
         margin: 0 3vw; }
         @media screen and (max-width: 1024px) {
           .focus__text .feature-box-list li:nth-of-type(2) {
-            margin: 0 0.5em; } }
+            margin: 0 0.5em 3em 0.5em; } }
         .focus__text .feature-box-list li:nth-of-type(2)::after {
           background-image: url(../img/focus-tick-green.svg); }
       @media screen and (max-width: 1024px) {
@@ -7276,7 +7276,12 @@ body {
           min-height: calc(6.4em + 1.3vw); } }
       @media screen and (min-width: 1251px) {
         .sdg-17-three-cols .box-list dd {
-          min-height: auto; } }
+          min-height: auto;
+          font-size: 65%; } }
+      @media screen and (min-width: 1410px) {
+        .sdg-17-three-cols .box-list dd {
+          min-height: auto;
+          font-size: 70%; } }
       .sdg-17-three-cols .box-list dd strong {
         color: #19486a;
         font-family: "Miriam Libre"; }
@@ -8228,7 +8233,7 @@ body {
       width: 90%;
       height: auto; }
     .sdg-5-10 .sdg-5-10-header .container h2 {
-      display: inline; }
+      display: block; }
       .sdg-5-10 .sdg-5-10-header .container h2:nth-child(1) {
         color: #ff3a21;
         margin-bottom: 0; }
