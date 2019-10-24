@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="33px" viewBox="0 0 22 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>scroll-down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="scroll" transform="translate(-25.000000, -17.000000)" fill="#282828" fill-rule="nonzero">
+            <g id="Down_arrow_-_OFF" transform="translate(35.248000, 33.500000) rotate(90.000000) translate(-35.248000, -33.500000) translate(1.748000, -1.000000)">
+                <g id="scroll-down-arrow" transform="translate(17.025000, 22.964000)">
+                    <path d="M19.335,0.911 C21.024,2.664 27.914,7.985 27.048,10.561 C26.615,11.847 24.06,13.599 23.088,14.587 L18.14,19.621 C17.161,20.616 21.617,22.19 22.66,21.129 L28.598,15.089 C29.652,14.016 32.287,12.309 32.383,10.655 C32.467,9.201 30.344,7.689 29.542,6.855 L23.694,0.786 C22.779,-0.169 18.079,-0.396 19.335,0.911" id="Path_329"></path>
+                    <path d="M2.339,11.532 C11.505,11.219 20.662,12.287 29.83,11.975 C32.806,11.875 32.943,8.689 29.901,8.792 C20.733,9.11 11.576,8.036 2.413,8.349 C-0.567,8.451 -0.703,11.636 2.339,11.532" id="Path_328"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
