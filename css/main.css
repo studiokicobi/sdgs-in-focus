@@ -6722,20 +6722,21 @@ body {
     text-underline-position: under;
     text-decoration: underline; }
   .pushy-content ul li ul li {
-    padding-left: 1em; }
+    padding-left: 0; }
     .pushy-content ul li ul li a {
       font-weight: 400; }
-  .pushy-content ul li .social-links {
-    margin-top: 2.5em; }
-    .pushy-content ul li .social-links ul {
+  .pushy-content .social-links {
+    margin-top: 2.5em;
+    margin-left: 1.6em; }
+    .pushy-content .social-links ul {
       display: block;
-      margin: 2em 0 0 2.3em; }
-      .pushy-content ul li .social-links ul li {
+      margin: 2em 0 0 0; }
+      .pushy-content .social-links ul li {
         float: left; }
-        .pushy-content ul li .social-links ul li a {
+        .pushy-content .social-links ul li a {
           margin: 0;
           padding: 0.5em; }
-          .pushy-content ul li .social-links ul li a:after {
+          .pushy-content .social-links ul li a:after {
             content: "";
             position: absolute;
             top: 0;
@@ -6744,13 +6745,13 @@ body {
             left: 0;
             position: relative;
             display: inline-block; }
-          .pushy-content ul li .social-links ul li a svg {
+          .pushy-content .social-links ul li a svg {
             height: 1.58em;
             width: 1.58em; }
-            .pushy-content ul li .social-links ul li a svg path {
+            .pushy-content .social-links ul li a svg path {
               -webkit-transition: all 0.2s;
               transition: all 0.2s; }
-          .pushy-content ul li .social-links ul li a:hover svg path, .pushy-content ul li .social-links ul li a:active svg path, .pushy-content ul li .social-links ul li a:focus svg path {
+          .pushy-content .social-links ul li a:hover svg path, .pushy-content .social-links ul li a:active svg path, .pushy-content .social-links ul li a:focus svg path {
             fill: #33a6dd; }
 
 .main-hero {
@@ -6984,12 +6985,12 @@ body {
       color: #282828;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
-              align-items: stretch;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
+              align-items: stretch; }
       @media screen and (max-width: 1023px) {
         .focus__text .feature-box-list {
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
               -ms-flex-direction: column;
@@ -7047,13 +7048,11 @@ body {
             margin: 0 0.5em; } }
         .focus__text .feature-box-list li:nth-of-type(2)::after {
           background-image: url(../img/focus-tick-green.svg); }
-      .focus__text .feature-box-list li:nth-of-type(3) {
-        margin-left: 3vw; }
-        @media screen and (max-width: 1024px) {
-          .focus__text .feature-box-list li:nth-of-type(3) {
-            margin-left: 0; } }
-        .focus__text .feature-box-list li:nth-of-type(3)::after {
-          background-image: url(../img/focus-tick-orange.svg); }
+      @media screen and (max-width: 1024px) {
+        .focus__text .feature-box-list li:nth-of-type(3) {
+          margin-left: 0; } }
+      .focus__text .feature-box-list li:nth-of-type(3)::after {
+        background-image: url(../img/focus-tick-orange.svg); }
   .focus__img {
     padding-left: 0;
     height: 100%; }

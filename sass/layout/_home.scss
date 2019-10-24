@@ -1027,52 +1027,54 @@ body {
       }
       ul {
         li {
-          padding-left: 1em;
+          padding-left: 0;
           a {
             font-weight: 400;
           }
         }
       }
-      .social-links {
-        margin-top: 2.5em;
+    }
+  }
 
-        ul {
-          display: block;
-          margin: 2em 0 0 2.3em;
+  .social-links {
+    margin-top: 2.5em;
+    margin-left: 1.6em;
 
-          li {
-            float: left;
+    ul {
+      display: block;
+      margin: 2em 0 0 0;
 
-            a {
-              margin: 0;
-              padding: 0.5em;
+      li {
+        float: left;
 
-              &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                position: relative;
-                display: inline-block;
-              }
+        a {
+          margin: 0;
+          padding: 0.5em;
 
-              svg {
-                height: 1.58em;
-                width: 1.58em;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: relative;
+            display: inline-block;
+          }
 
-                path {
-                  transition: all 0.2s;
-                }
-              }
+          svg {
+            height: 1.58em;
+            width: 1.58em;
 
-              @include on-event {
-                svg {
-                  path {
-                    fill: $dark-sky-blue;
-                  }
-                }
+            path {
+              transition: all 0.2s;
+            }
+          }
+
+          @include on-event {
+            svg {
+              path {
+                fill: $dark-sky-blue;
               }
             }
           }
@@ -1389,9 +1391,9 @@ body {
       flex-direction: row;
       color: $black-2;
       align-items: stretch;
-      justify-content: center;
 
       @media screen and (max-width: 1023px) {
+        justify-content: center;
         flex-direction: column;
         align-items: center;
         padding-bottom: 1em;
@@ -1457,8 +1459,6 @@ body {
       }
 
       li:nth-of-type(3) {
-        margin-left: 3vw;
-
         @media screen and (max-width: 1024px) {
           margin-left: 0;
         }
