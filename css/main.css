@@ -6732,7 +6732,8 @@ body {
       display: block;
       margin: 2em 0 0 0; }
       .pushy-content .social-links ul li {
-        float: left; }
+        float: left;
+        padding-left: 0; }
         .pushy-content .social-links ul li a {
           margin: 0;
           padding: 0.5em; }
