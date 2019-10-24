@@ -6722,7 +6722,7 @@ body {
     text-underline-position: under;
     text-decoration: underline; }
   .pushy-content ul li ul li {
-    padding-left: 0; }
+    padding-left: 1em; }
     .pushy-content ul li ul li a {
       font-weight: 400; }
   .pushy-content .social-links {
