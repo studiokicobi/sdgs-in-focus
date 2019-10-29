@@ -92,12 +92,10 @@ $white: rgb(255, 255, 255);
 $dark-seafoam: rgb(31, 173, 142);
 $ice: rgb(236, 245, 243);
 $dark-sky-blue: rgb(51, 166, 221);
-$very-light-pink: rgb(242, 242, 242);
 $ice-blue: rgb(227, 241, 245);
 $black: rgb(40, 40, 40);
 $deep-lavender: rgb(138, 86, 183);
-$very-light-pink: rgb(201, 201, 201);
-$very-light-pink: rgb(252, 240, 234);
+$very-light-pink: #f2f2f2;
 $brownish-grey: rgb(90, 90, 90);
 $sickly-yellow: rgb(216, 209, 41);
 $dark-peach: rgb(229, 123, 89);
@@ -106,7 +104,6 @@ $medium-pink: rgb(229, 98, 143);
 $very-light-green: rgb(225, 240, 224);
 $light-pink: rgb(248, 219, 232);
 $ecru: rgb(246, 244, 207);
-$very-light-pink: rgb(228, 228, 228);
 $pale-lavender: rgb(238, 228, 247);
 $powder-blue: rgb(188, 224, 253);
 $dark-slate-blue: rgb(25, 72, 106);
@@ -2002,11 +1999,11 @@ body {
 //
 .sdg-footer {
   .footer-card {
-    border-radius: 0.04em;
+    border-radius: 4px;
     background-color: $very-light-pink;
     padding: 0;
     margin: 0 0.75em 2em 0.75em;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16), 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.16), 0 0 0 0 rgba(0, 0, 0, 0);
 
     @media screen and (max-width: 1024px) {
       max-width: 20em;
@@ -2025,12 +2022,23 @@ body {
     }
 
     .card {
-      border-radius: 0.04em;
+      border-radius: 4px;
       min-height: 100%;
       background: transparent;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
 
       @media screen and (max-width: 1024px) {
         min-height: auto;
+      }
+
+      a {
+        @include on-event {
+          .card-image {
+            img {
+              transform: scale(1.05);
+            }
+          }
+        }
       }
 
       .card-image {
@@ -2087,6 +2095,20 @@ body {
           width: 100%;
           bottom: 1em;
           padding: 0 1.5em;
+
+          img {
+            &.img-meta {
+              height: 1.1em;
+              padding-bottom: 0.05em;
+            }
+
+            &.multicompany {
+              border-right: 1px solid $black;
+              padding-right: 0.4em;
+              margin-right: 0.2em;
+              height: 1.2em;
+            }
+          }
         }
       }
     }
@@ -2160,6 +2182,7 @@ body {
 
   &__button-more {
     transition: all 0.2s;
+
     @include on-event {
       transform: translateX(3px);
       transition: all 0.2s;
@@ -2500,6 +2523,9 @@ body {
       margin-bottom: 0.3em;
       padding-left: 3.2rem;
       position: relative;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
 
       @media screen and (max-width: 1024px) {
       }
@@ -2852,6 +2878,7 @@ body {
   }
 }
 
+.more-link em,
 .more-link a {
   font-family: "Permanent Marker";
   color: $dark-sky-blue;
@@ -2992,17 +3019,23 @@ body {
 .sdg-3-3-part-6 {
   background: $light-yellow-green;
 
+  .container {
+    position: relative;
+  }
+
   .venn-container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -41%);
+    transform: translate(-50%, -50%);
+    height: 700px;
 
     @media screen and (max-width: 768px) {
       position: relative;
       top: 0;
       left: 0;
       transform: translate(0, 0);
+      height: auto;
     }
   }
 
@@ -3039,8 +3072,10 @@ body {
 
   .feature-2 {
     position: absolute;
-    top: 240px;
-    left: 25px;
+    // top: 240px;
+    // left: 25px;
+    top: 250px;
+    left: -50px;
 
     @media screen and (max-width: 768px) {
       position: relative;
@@ -3052,8 +3087,10 @@ body {
 
   .feature-3 {
     position: absolute;
-    top: 240px;
-    left: 315px;
+    // top: 240px;
+    // left: 315px;
+    top: 250px;
+    left: 250px;
 
     @media screen and (max-width: 768px) {
       position: relative;
@@ -3077,13 +3114,20 @@ body {
 
   dl {
     background: url(../img/sdg3-3-circle-green.svg) no-repeat center 1em;
-    padding: 3em;
+    // padding: 3em;
+    // background-size: 15.5em;
+    // height: 19em;
+    padding: 70px 0 0 0;
     background-repeat: no-repeat;
-    background-size: 15.5em;
-    height: 19em;
+    background-size: 350px;
+    height: 500px;
+    width: 500px;
+    margin: 0;
 
     @media screen and (max-width: 1024px) {
-      background-size: 17em;
+      background-size: 350px;
+      height: 370px;
+      width: auto;
     }
 
     @media screen and (max-width: 500px) {
